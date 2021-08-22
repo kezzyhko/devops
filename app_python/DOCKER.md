@@ -2,7 +2,7 @@
 
 The docker container for this app is accessible as [`kezzyhko/devops`](https://hub.docker.com/repository/docker/kezzyhko/devops)
 
-This README contains the best practices I found about docker. 
+This README contains the best practices I found about docker.
 
 
 
@@ -30,5 +30,5 @@ So, in my `Dockerfile`, the line with `COPY` instruction is almost the last one,
 
 ## Other
 
-Also, I found an official guide on best practices from Docker with more technical advides: <br>
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+Also, I found an official guide on best practices from Docker with more technical advides:  
+<https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>
