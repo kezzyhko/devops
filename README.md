@@ -19,6 +19,6 @@ The simplest way is to use docker:
 If you do not want to use docker for some reason, then clone the repo, install `requirements.txt` and run `main.py`:  
 `git clone https://github.com/kezzyhko/devops.git`  
 `pip3 install -r ./devops/app_python/requirements.txt`  
-`python3 ./devops/app_python/app_files/main.p`  
+`python3 ./devops/app_python/app_files/main.py`  
 
 By default, app is accessible on port `5000`
