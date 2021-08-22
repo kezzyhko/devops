@@ -14,7 +14,7 @@ However, in my opinion, the current app requirements is too simple even for *Fla
 
 ## `if __name__ == '__main__':`
 
-Even if you do not expect your file to be imported, it is still a good practice to use this check. At the very least, this convention helps with readability. Most python developers, if there is no such line in the code, will assume that the file is not supposed to be executed diffectly. 
+Even if you do not expect your file to be imported, it is still a good practice to use this check. At the very least, this convention helps with readability. Most python developers, if there is no such line in the code, will assume that the file is not supposed to be executed diffectly.
 
 
 
