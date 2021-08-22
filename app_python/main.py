@@ -3,13 +3,11 @@ from datetime import datetime
 import pytz
 
 
-
 ADDR = ''
 PORT = 5000
 CHARSET = 'utf-8'
 DATETIME_TIMEZONE = pytz.timezone('Europe/Moscow')
 DATETIME_FORMAT = "%d/%m/%Y %H:%M:%S"
-
 
 
 class DatetimeHTTPRequestHandler(BaseHTTPRequestHandler):
@@ -20,8 +18,6 @@ class DatetimeHTTPRequestHandler(BaseHTTPRequestHandler):
 
 		datetime_to_print = datetime.now(DATETIME_TIMEZONE).strftime(DATETIME_FORMAT)
 		self.wfile.write(datetime_to_print.encode(CHARSET))
-		
-
 
 
 if __name__ == '__main__':
