@@ -12,7 +12,7 @@ DATETIME_FORMAT = "%d/%m/%Y %H:%M:%S"
 
 
 
-class XXX(BaseHTTPRequestHandler):
+class DatetimeHTTPRequestHandler(BaseHTTPRequestHandler):
 	def do_GET(self):
 		self.send_response(200)
 		self.send_header('Content-type', 'text/html; charset=' + CHARSET)
@@ -25,5 +25,5 @@ class XXX(BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-	server = HTTPServer((ADDR, PORT), XXX)
+	server = HTTPServer((ADDR, PORT), DatetimeHTTPRequestHandler)
 	server.serve_forever()
