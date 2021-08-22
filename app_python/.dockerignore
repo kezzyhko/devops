@@ -1,6 +1,5 @@
 # python-specific
 **/__pycache__
-/requirements.txt
 
 # README files
 /DOCKER.md
