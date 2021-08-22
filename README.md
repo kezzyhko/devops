@@ -13,7 +13,7 @@ This app does not use any frameworks, it uses only `http.server` python library
 
 ## Quick start
 
-The simplest way is to use docker:<br>
+The simplest way is to use docker:  
 `docker run -p 5000:5000 kezzyhko/devops`
 
 If you do not want to use docker for some reason, then clone the repo, install `requirements.txt` and run `main.py`:
