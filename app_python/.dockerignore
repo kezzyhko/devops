@@ -1,0 +1,12 @@
+# python-specific
+**/__pycache__
+/requirements.txt
+
+# README files
+/DOCKER.md
+/PYTHON.md
+
+# other
+/.gitignore
+/.dockerignore
+/Dockerfile
