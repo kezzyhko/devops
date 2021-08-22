@@ -1,10 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:20.04
-
-RUN apt update
-RUN apt install python3 -y
-RUN apt install python3-pip -y
+FROM python:3.9-alpine
 
 COPY ./requirements.txt /requirements.txt
 RUN pip3 install -r /requirements.txt
