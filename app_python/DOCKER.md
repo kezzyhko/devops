@@ -30,5 +30,7 @@ So, in my `Dockerfile`, the line with `COPY` instruction is almost the last one,
 
 ## Other
 
-Also, I found an official guide on best practices from Docker with more technical advides:  
-<https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>
+~~Also, I found an official guide on best practices from Docker with more technical advides:~~  
+~~<https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>~~  
+Although the guide above is from the docker itself, it is pretty controvertial. Instead, here is the better guide:  
+<https://sysdig.com/blog/dockerfile-best-practices/>  
