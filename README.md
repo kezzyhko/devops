@@ -1,13 +1,22 @@
+[![Django CI](https://github.com/kezzyhko/devops/actions/workflows/django.yml/badge.svg)](https://github.com/kezzyhko/devops/actions/workflows/django.yml)
+
+
 # DevOps
+
+This is repository for the DevOps Engineering course in Innopolis University
+
+Table of contents:  
+[What is in this repo?](#what-is-in-this-repo)  
+[Quick start](#quick-start)  
+[Unit Tests](#unit-tests) 
 
 
 
 ## What is in this repo?
 
-This is repository for the DevOps Engineering course in Innopolis University
-
-`app_python` folder contains python web app, which shows current time in `Europe/Moscow` timezone.  
-This app does not use any frameworks, it uses only `http.server` python library
+* [`app_python`](app_python) folder contains python web app and necessary files for Docker.
+* [`app_python/app_files`](app_python/app_files) folder contains the app itself, which shows current time in `Europe/Moscow` timezone. This app uses *Django* framework.
+* [`.github/workflows`](.github/workflows) folder contains workflows for testing the app and publishing it to the docker hub
 
 
 
@@ -22,3 +31,10 @@ If you do not want to use docker for some reason, then clone the repo, install `
 `python3 ./devops/app_python/app_files/main.py`  
 
 By default, app is accessible on port `5000`
+
+
+
+## Unit tests
+
+The unit tests for this app are located at [`app_files/tests.py`](app_files/tests.py).  
+There are three tests, which test the `datetime_view` view, located in the [`app_files/views.py`](app_files/views.py).
