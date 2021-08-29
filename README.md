@@ -1,4 +1,5 @@
 [![Django CI](https://github.com/kezzyhko/devops/actions/workflows/django.yml/badge.svg)](https://github.com/kezzyhko/devops/actions/workflows/django.yml)
+[![CI to Docker Hub](https://github.com/kezzyhko/devops/actions/workflows/dockerhub.yml/badge.svg)](https://github.com/kezzyhko/devops/actions/workflows/dockerhub.yml)
 
 
 # DevOps
