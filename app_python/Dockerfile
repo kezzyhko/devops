@@ -8,7 +8,7 @@ RUN pip3 install --no-cache-dir -r /requirements.txt
 WORKDIR /app
 RUN adduser -D user && chown -R user /app
 USER user
-COPY . /app
+COPY ./app_files /app
 
 EXPOSE 5000
 CMD ["python3", "main.py"]
