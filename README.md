@@ -1,3 +1,6 @@
+[![Django CI](https://github.com/kezzyhko/devops/actions/workflows/django.yml/badge.svg)](https://github.com/kezzyhko/devops/actions/workflows/django.yml)
+
+
 # DevOps
 
 This is repository for the DevOps Engineering course in Innopolis University
