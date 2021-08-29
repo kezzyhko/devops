@@ -22,3 +22,10 @@ If you do not want to use docker for some reason, then clone the repo, install `
 `python3 ./devops/app_python/app_files/main.py`  
 
 By default, app is accessible on port `5000`
+
+
+
+## Unit tests
+
+The unit tests for this app are located at [`app_files/tests.py`](app_files/tests.py).  
+There are three tests, which test the `datetime_view` view, located in the [`app_files/views.py`](app_files/views.py).
