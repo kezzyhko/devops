@@ -6,8 +6,8 @@
 
 This is repository for the DevOps Engineering course in Innopolis University
 
-`app_python` folder contains python web app, which shows current time in `Europe/Moscow` timezone.  
-This app does not use any frameworks, it uses only `http.server` python library
+* `app_python` folder contains python web app and necessary files for Docker.
+* `app_python/app_files` folder contains the app itself, which shows current time in `Europe/Moscow` timezone. This app uses *Django* framework.
 
 
 
