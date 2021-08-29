@@ -1,20 +1,42 @@
 pipeline {
-  agent { docker { image 'python:3.8' } }
+  environment {
+    imagename = "kezzyhko/devops"
+    registryCredential = 'dockerhub'
+    dockerImage = ''
+  }
+  agent any
   stages {
-    stage('build') {
+    stage('Build') {
       steps {
-        sh 'pip install -r app_python/requirements.txt'
+        script {
+          dockerImage = docker.build imagename
+        }
       }
     }
-    stage('test') {
+    stage('Test') {
       steps {
-        sh 'python app_python/app_files/manage.py test'
-      }   
+        script {
+          dockerImage.inside {
+            sh 'python3 manage.py test'
+          }
+        }
+      }
     }
-    stage('deploy') {
+    stage('Push') {
       steps {
-        sh 'python app_python/unittests.py'
-      }   
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push("$BUILD_NUMBER")
+            dockerImage.push('latest')
+          }
+        }
+      }
+    }
+    stage('Clean up') {
+      steps {
+        sh "docker rmi $imagename:$BUILD_NUMBER"
+        sh "docker rmi $imagename:latest"
+      }
     }
   }
 }
