@@ -2,6 +2,11 @@
 
 This README contains the best practices I found about python.
 
+Table of contents:  
+[Frameworks](#frameworks)  
+[Python best practices](#python-best-practices)  
+[Unit Tests](#unit-tests)  
+
 
 
 ## Frameworks
