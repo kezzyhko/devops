@@ -1,10 +1,15 @@
 # DevOps
 
+This is repository for the DevOps Engineering course in Innopolis University
+
+Table of contents:  
+[What is in this repo?](#what-is-in-this-repo)  
+[Quick start](#quick-start)  
+[Unit Tests](#unit-tests) 
+
 
 
 ## What is in this repo?
-
-This is repository for the DevOps Engineering course in Innopolis University
 
 * [`app_python`](app_python) folder contains python web app and necessary files for Docker.
 * [`app_python/app_files`](app_python/app_files) folder contains the app itself, which shows current time in `Europe/Moscow` timezone. This app uses *Django* framework.
