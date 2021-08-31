@@ -47,7 +47,7 @@ There are three tests, which test the `datetime_view` view, located in the [`app
 ## Vagrant quick start
 
 If you want to use it locally using VirtualBox, the following command will be enough:  
-`vagrant up`  
+`vagrant up --provider=virtualbox`  
 
 If you want to use it with Google Cloud, then you need to change constants in [`Vagrantfile`](vagrant/Vagrantfile), add necessary keys and then use the following command:  
 `vagrant up --provider=google`  
