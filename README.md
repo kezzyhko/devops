@@ -9,8 +9,8 @@ This is repository for the DevOps Engineering course in Innopolis University
 Table of contents:  
 [What is in this repo?](#what-is-in-this-repo)  
 [Python app quick start](#python-app-quick-start)  
-[Unit Tests](#unit-tests) 
-[Vagrant quick start](#vagrant-quick-start) 
+[Unit Tests](#unit-tests)  
+[Vagrant quick start](#vagrant-quick-start)  
 
 
 
@@ -49,5 +49,5 @@ There are three tests, which test the `datetime_view` view, located in the [`app
 If you want to use it locally using VirtualBox, the following command will be enough:  
 `vagrant up --provider=virtualbox`  
 
-If you want to use it with Google Cloud, then you need to change constants in [`Vagrantfile`](vagrant/Vagrantfile), add necessary keys and then use the following command:  
+If you want to use it with Google Cloud, then you need to change constants in [`Vagrantfile`](vagrant/Vagrantfile), add necessary key files and then use the following command:  
 `vagrant up --provider=google`  
