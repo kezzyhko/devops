@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-20.04"
+
+  config.vm.provider :google do |google, override|
+    google.google_project_id = "inno-devops"
+    google.google_json_key_location = "googlekey.json"
+
+    google.image_family = 'ubuntu-2004-lts'
+    google.image_project_id = "ubuntu-os-cloud"
+
+    override.ssh.username = "kezzyhko"
+    override.ssh.private_key_path = "sshkey.key"
+  end
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+    vb.cpus = "2"
+  end
+end
