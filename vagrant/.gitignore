@@ -1,1 +1,3 @@
-**/.vagrant
+/.vagrant
+/googlekey.json
+/sshkey.key
