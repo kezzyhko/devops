@@ -1,9 +1,5 @@
 ---
 - name: "TimeApp"
   hosts: all
-  tasks:
-    - name: install docker
-      become: true
-      apt:
-        name: python
-        state: latest
+  roles:
+    - installdocker
