@@ -5,6 +5,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-20.04"
 
   config.vm.provider :google do |google, override|
+    override.vm.box = "google/gce"
+
     google.google_project_id = "inno-devops"
     google.google_json_key_location = "googlekey.json"
 
