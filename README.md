@@ -37,7 +37,7 @@ By default, app is accessible on port `5000`
 
 
 
-## Unit tests
+### Unit tests
 
 The unit tests for this app are located at [`app_files/tests.py`](app_files/tests.py).  
 There are three tests, which test the `datetime_view` view, located in the [`app_files/views.py`](app_files/views.py).
@@ -51,3 +51,10 @@ If you want to use it locally using VirtualBox, the following command will be en
 
 If you want to use it with Google Cloud, then you need to change constants in [`Vagrantfile`](vagrant/Vagrantfile), add necessary key files and then use the following command:  
 `vagrant up --provider=google`  
+
+
+
+## Ansible
+
+Ansible provisioning is automatically executed when using `vagrant up <...>`.  
+If you want to run it manually, use `vagrant provision` or configure ansible hosts and execute [the playbook](ansible/playbook.yml)
