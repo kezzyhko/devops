@@ -17,8 +17,7 @@
       name: app_python
       image: "{{ image }}"
       state: started
-      ports:
-        - "5000:5000"
+      ports: "{{ ports }}"
 
   # Acknowledgements:
   # https://docs.ansible.com/ansible/2.5/modules/docker_container_module.html#examples
