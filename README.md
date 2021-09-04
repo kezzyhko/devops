@@ -8,22 +8,24 @@ This is repository for the DevOps Engineering course in Innopolis University
 
 Table of contents:  
 [What is in this repo?](#what-is-in-this-repo)  
-[Python app quick start](#python-app-quick-start)  
+[Python app](#python-app)  
 [Unit Tests](#unit-tests)  
-[Vagrant quick start](#vagrant-quick-start)  
+[Vagrant](#vagrant)  
+[Ansible](#ansible)  
 
 
 
 ## What is in this repo?
 
-* [`app_python`](app_python) folder contains python web app and necessary files for Docker.
-* [`app_python/app_files`](app_python/app_files) folder contains the app itself, which shows current time in `Europe/Moscow` timezone. This app uses *Django* framework.
-* [`vagrant`](vagrant) folder contains Vagrantfile for managing VM, which works on both VirtualBox and Google Cloud Platform
-* [`.github/workflows`](.github/workflows) folder contains workflows for testing the app and publishing it to the docker hub
+* [`app_python`](app_python) folder contains python web app and necessary files for Docker.  
+* [`app_python/app_files`](app_python/app_files) folder contains the app itself, which shows current time in `Europe/Moscow` timezone. This app uses *Django* framework.  
+* [`.github/workflows`](.github/workflows) folder contains workflows for testing the app and publishing it to the docker hub  
+* [`vagrant`](vagrant) folder contains Vagrantfile for managing VM, which works on both VirtualBox and Google Cloud Platform  
+* [`ansible`](ansible) folder contains playbooks and roles for provisioning the VM (installing docker and running image from dockerhub)  
 
 
 
-## Python app quick start
+## Python app
 
 The simplest way is to use docker:  
 `docker run -p 5000:5000 kezzyhko/devops`
@@ -44,7 +46,7 @@ There are three tests, which test the `datetime_view` view, located in the [`app
 
 
 
-## Vagrant quick start
+## Vagrant
 
 If you want to use it locally using VirtualBox, the following command will be enough:  
 `vagrant up --provider=virtualbox`  
