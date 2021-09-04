@@ -3,3 +3,6 @@
   hosts: all
   roles:
     - installdocker
+    - role: deploydockerimage
+      vars:
+        image: "kezzyhko/devops"
