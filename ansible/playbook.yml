@@ -3,3 +3,8 @@
   hosts: all
   roles:
     - installdocker
+    - role: deploydockerimage
+      vars:
+        image: "kezzyhko/devops"
+        ports: 
+        - "5000:5000"
