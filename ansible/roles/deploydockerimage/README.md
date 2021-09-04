@@ -1,0 +1,1 @@
+This role creates container with given `image` variable, and forwards given `ports` variable
