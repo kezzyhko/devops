@@ -1,25 +1,39 @@
 # Monitoring
 
 
-## Mentions
+Table of contents:  
+[Disclaimer](#disclaimer)  
+[Report and screenshots](#report-and-screenshots)  
+[Best practices](#best-practices)  
 
-Thanks to the following repo for example of config files:  
-https://github.com/black-rosary/loki-nginx
+
+## Disclaimer
+
+We were provided with example repo in the task: https://github.com/black-rosary/loki-nginx  
+Part of config files in this folder was taken form the above mentioned repo.  
 
 
-## Screenshots of working system
+## Report and screenshots
 
 Grafana works:  
-![](report_screenshots/grafana-login.png)  
-![](report_screenshots/grafana-welcome.png)  
+![](report_screenshots/grafana/login.png)  
+![](report_screenshots/grafana/welcome.png)  
+
+Prometheus works:  
+![](report_screenshots/prometheus.png)  
 
 All data sources are present:  
-![](report_screenshots/data-sources-loki.png)
-![](report_screenshots/data-sources-list.png) 
+![](report_screenshots/data-sources/list.png)  
+![](report_screenshots/data-sources/loki.png)  
+![](report_screenshots/data-sources/tested.png)  
 
-And everything is working:  
-![](report_screenshots/logs-loki.png)
-![](report_screenshots/logs-prometheus.png)
+And they are working:  
+![](report_screenshots/logs/loki.png)  
+![](report_screenshots/logs/prometheus.png)  
+
+Dashboards are added as well:  
+![](report_screenshots/dashboards/loki.png)  
+![](report_screenshots/dashboards/prometheus.png)  
 
 
 ## Best practices
