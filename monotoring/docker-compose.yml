@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+
+  app:
+    image: kezzyhko/devops
+    expose:
+      - 5000
+    ports:
+      - "5000:5000"
