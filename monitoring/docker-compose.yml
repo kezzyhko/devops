@@ -5,7 +5,7 @@ services:
     image: prom/prometheus:${PROMETHEUS_VERSION}
     container_name: monitoring.prometheus
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus-data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
@@ -115,14 +115,12 @@ services:
           memory: 100M
 
   grafana:
-    build:
-      context: ./grafana
-      args:
-        - GRAFANA_VERSION=${GRAFANA_VERSION}
+    image: grafana/grafana:${GRAFANA_VERSION}
     container_name: monitoring.grafana
     volumes:
       - grafana-data:/var/lib/grafana
-      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./configs/grafana-provisioning:/etc/grafana/provisioning
+      - ./configs/grafana.ini:/etc/grafana/grafana.ini
     environment:
       - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
       - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
@@ -158,7 +156,7 @@ services:
     volumes:
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - promtail-data:/var/lib/promtail/positions
-      - ./promtail/promtail.yml:/etc/promtail/promtail.yml
+      - ./configs/promtail.yml:/etc/promtail/promtail.yml
     command:
       - '-config.file=/etc/promtail/promtail.yml'
     restart: unless-stopped
@@ -183,7 +181,7 @@ services:
     ports:
       - "3100:3100"
     volumes:
-      - ./loki/loki-config.yml:/etc/loki-config.yml
+      - ./configs/loki.yml:/etc/loki-config.yml
     command: -config.file=/etc/loki-config.yml
     restart: unless-stopped
     networks:
