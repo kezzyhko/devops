@@ -10,7 +10,7 @@ Table of contents:
 ## Disclaimer
 
 We were provided with example repo in the task: https://github.com/black-rosary/loki-nginx  
-Part of config files in this folder was taken form the above mentioned repo.  
+Part of config files in this folder were taken form the above mentioned repo.  
 
 
 ## Report and screenshots
