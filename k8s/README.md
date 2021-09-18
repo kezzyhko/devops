@@ -8,6 +8,10 @@ Here is the output of `kubectl get pods,svc`:
 * after adding helm chart
 ![](report_screenshots/output/after_helm.png)
 
+The service and the app are working:
+![](report_screenshots/service.png)  
+![](report_screenshots/app.png)  
+
 Also, here are the screenshots of "Workloads" dashboard page  
 ![](report_screenshots/workload_status/charts.png)  
 ![](report_screenshots/workload_status/deployments.png)  
