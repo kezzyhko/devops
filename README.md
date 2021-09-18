@@ -22,6 +22,8 @@ Table of contents:
 * [`.github/workflows`](.github/workflows) folder contains workflows for testing the app and publishing it to the docker hub  
 * [`vagrant`](vagrant) folder contains Vagrantfile for managing VM, which works on both VirtualBox and Google Cloud Platform  
 * [`ansible`](ansible) folder contains playbooks and roles for provisioning the VM (installing docker and running image from dockerhub)  
+* [`monitoring`](monitoring) folder contains stuff necessary for grafana/promtail/loki/prometheus stack  
+* [`k8s`](k8s) folder contains configs for kubernetes & helm
 
 
 
