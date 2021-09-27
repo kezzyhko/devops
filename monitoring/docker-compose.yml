@@ -97,12 +97,8 @@ services:
       - 5000
     ports:
       - "5000:5000"
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "100m"
-        max-file: "10"
-        tag: "{{.ImageName}}|{{.Name}}"
+    volumes:
+      - app-logs:/app/logs
     networks:
       - monitoring.network
     logging:
@@ -207,3 +203,4 @@ volumes:
   loki-data: {}
   promtail-data: {}
   prometheus-data: {}
+  app-logs: {}
