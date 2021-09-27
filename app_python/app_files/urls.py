@@ -19,4 +19,5 @@ import views
 
 urlpatterns = [
     path('', views.datetime_view),
+    path('visits', views.visits),
 ]
