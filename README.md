@@ -23,7 +23,7 @@ Table of contents:
 * [`vagrant`](vagrant) folder contains Vagrantfile for managing VM, which works on both VirtualBox and Google Cloud Platform  
 * [`ansible`](ansible) folder contains playbooks and roles for provisioning the VM (installing docker and running image from dockerhub)  
 * [`monitoring`](monitoring) folder contains stuff necessary for grafana/promtail/loki/prometheus stack  
-* [`k8s`](k8s) folder contains configs for kubernetes & helm
+* [`k8s`](k8s) folder contains configs for kubernetes & helm, which also demonstrates work with secrets
 
 
 
