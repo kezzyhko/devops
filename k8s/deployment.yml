@@ -15,5 +15,11 @@ spec:
       containers:
       - name: time-app
         image: kezzyhko/devops:latest
+        env:
+          - name: super-secret
+            valueFrom:
+              secretKeyRef:
+                name: super-secret
+                key: secret_key
         ports:
         - containerPort: 5000
