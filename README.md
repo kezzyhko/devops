@@ -7,11 +7,11 @@
 This is repository for the DevOps Engineering course in Innopolis University
 
 Table of contents:  
-[What is in this repo?](#what-is-in-this-repo)  
-[Python app](#python-app)  
-[Unit Tests](#unit-tests)  
-[Vagrant](#vagrant)  
-[Ansible](#ansible)  
+* [What is in this repo?](#what-is-in-this-repo)  
+* [Python app](#python-app)  
+* [Unit Tests](#unit-tests)  
+* [Vagrant](#vagrant)  
+* [Ansible](#ansible)  
 
 
 
