@@ -1,16 +1,26 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ include "time-app.fullname" . }}
   labels:
     {{- include "time-app.labels" . | nindent 4 }}
 spec:
+  serviceName: {{ .Values.serviceName }}
+  podManagementPolicy: Parallel
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
       {{- include "time-app.selectorLabels" . | nindent 6 }}
+  volumeClaimTemplates:
+  - metadata:
+      name: logs
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 128M
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -41,10 +51,12 @@ spec:
             - name: http
               containerPort: 5000
               protocol: TCP
-          volumeMouns:
+          volumeMounts:
             - name: config-volume
               mountPath: /app/config.yaml
               subPath: files/config.yaml
+            - name: logs
+              mountPath: /app/logs
           env:
             - name: super-secret
               valueFrom:
