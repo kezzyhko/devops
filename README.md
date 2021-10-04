@@ -17,7 +17,7 @@ Table of contents:
 
 ## What is in this repo?
 
-* [`app_python`](app_python) folder contains python web app and necessary files for Docker.  
+* [`app_python`](app_python) folder contains python web app and necessary files for Docker. It keeps all datetime accesses in `logs/access.txt` file, accessable via `/visits` endpoint. 
 * [`app_python/app_files`](app_python/app_files) folder contains the app itself, which shows current time in `Europe/Moscow` timezone. This app uses *Django* framework.  
 * [`.github/workflows`](.github/workflows) folder contains workflows for testing the app and publishing it to the docker hub  
 * [`vagrant`](vagrant) folder contains Vagrantfile for managing VM, which works on both VirtualBox and Google Cloud Platform  
