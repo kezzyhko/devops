@@ -4,11 +4,11 @@
 
 serviceName: time-app
 
-replicaCount: 1
+replicaCount: 3
 
 image:
   repository: kezzyhko/devops
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
