@@ -12,6 +12,14 @@ spec:
   selector:
     matchLabels:
       {{- include "time-app.selectorLabels" . | nindent 6 }}
+  volumeClaimTemplates:
+  - metadata:
+      name: logs
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 128M
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -46,6 +54,8 @@ spec:
             - name: config-volume
               mountPath: /app/config.yaml
               subPath: files/config.yaml
+            - name: logs
+              mountPath: /app/logs
           env:
             - name: super-secret
               valueFrom:
