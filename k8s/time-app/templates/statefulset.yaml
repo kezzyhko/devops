@@ -41,6 +41,19 @@ spec:
         - name: config-volume
           configMap:
             name: example-config
+        - name: init-example
+          emptyDir: {}
+      initContainers:
+        - name: init-example
+          image: busybox
+          command:
+            - wget
+            - "-O"
+            - "/init-example/example.com.html"
+            - "https://example.com/"
+          volumeMounts:
+            - name: init-example
+              mountPath: /init-example
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -57,6 +70,8 @@ spec:
               subPath: files/config.yaml
             - name: logs
               mountPath: /app/logs
+            - name: init-example
+              mountPath: /init-example
           env:
             - name: super-secret
               valueFrom:
