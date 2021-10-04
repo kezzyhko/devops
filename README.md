@@ -7,23 +7,23 @@
 This is repository for the DevOps Engineering course in Innopolis University
 
 Table of contents:  
-[What is in this repo?](#what-is-in-this-repo)  
-[Python app](#python-app)  
-[Unit Tests](#unit-tests)  
-[Vagrant](#vagrant)  
-[Ansible](#ansible)  
+* [What is in this repo?](#what-is-in-this-repo)  
+* [Python app](#python-app)  
+* [Unit Tests](#unit-tests)  
+* [Vagrant](#vagrant)  
+* [Ansible](#ansible)  
 
 
 
 ## What is in this repo?
 
-* [`app_python`](app_python) folder contains python web app and necessary files for Docker. It keeps all datetime accesses in `logs/access.txt` file, accessable via `/visits` endpoint. 
-* [`app_python/app_files`](app_python/app_files) folder contains the app itself, which shows current time in `Europe/Moscow` timezone. This app uses *Django* framework.  
+* [`app_python`](app_python) folder contains python web app and necessary files for Docker
+* [`app_python/app_files`](app_python/app_files) folder contains the app itself, which shows current datetime in `Europe/Moscow` timezone. This app uses *Django* framework. It keeps datetimes of all requests to `/` in `logs/access.txt` file, accessable via `/visits` endpoint.  
 * [`.github/workflows`](.github/workflows) folder contains workflows for testing the app and publishing it to the docker hub  
 * [`vagrant`](vagrant) folder contains Vagrantfile for managing VM, which works on both VirtualBox and Google Cloud Platform  
 * [`ansible`](ansible) folder contains playbooks and roles for provisioning the VM (installing docker and running image from dockerhub)  
 * [`monitoring`](monitoring) folder contains stuff necessary for grafana/promtail/loki/prometheus stack  
-* [`k8s`](k8s) folder contains configs for kubernetes & helm, which also demonstrates work with secrets
+* [`k8s`](k8s) folder contains configs for kubernetes & helm, which also demonstrates work with charts, secrets, resource management, config maps, stateful sets, kube prometheus stack, and init containers
 
 
 

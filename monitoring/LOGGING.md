@@ -2,9 +2,9 @@
 
 
 Table of contents:  
-[Disclaimer](#disclaimer)  
-[Report and screenshots](#report-and-screenshots)  
-[Best practices](#best-practices)  
+* [Disclaimer](#disclaimer)  
+* [Report and screenshots](#report-and-screenshots)  
+* [Best practices](#best-practices)  
 
 
 ## Disclaimer

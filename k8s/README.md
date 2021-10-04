@@ -1,9 +1,9 @@
 # K8S readme
 
 Table of contents:  
-[Outputs of `kubectl get pods,svc`](#outputs-of-kubectl-get)  
-[Screenshots of working app](#screenshots-of-working-app)  
-[Dashboard screenshots](#dashboard-screenshots)  
+* [Outputs of `kubectl get pods,svc`](#outputs-of-kubectl-get)  
+* [Screenshots of working app](#screenshots-of-working-app)  
+* [Dashboard screenshots](#dashboard-screenshots)  
 
 ## Outputs of `kubectl get`
 * with manual command writing
